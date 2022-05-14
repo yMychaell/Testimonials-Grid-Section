@@ -33,7 +33,7 @@ body {
   grid-gap: 1.2em;
   grid-template-columns: 1fr;
   max-width: min(90%);
-  margin: 6.25em auto;
+  margin: 4em auto;
 }
 
 .card {
@@ -54,33 +54,34 @@ body {
 .card__header {
   align-items: center;
   display: flex;
-  letter-spacing: 1px;
   margin-bottom: 1rem;
 }
 
 .card__header h3 {
-  font-size: 1.35rem;
+  font-size: 1.125rem;
   font-weight: 400;
+  letter-spacing: 1px;
   margin-bottom: .1rem;
 }
 
 .card__header p {
   font-size: .925em;
+  font-size: .8125em;
   font-weight: 300;
   opacity: 50%;
 }
 
-.description {
+.card__description {
   font-size: 1.2em;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.assessment {
-  font-size: 1em;
-  line-height: 1.4;
-  opacity: 70%;
+.card__assessment {
+  font-size: 1.0625em;
+  line-height: 1.5;
+  opacity: 60%;
 }
 
 .card--bg-blue,
@@ -94,7 +95,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .assessment{
+  .card__assessment{
     font-size: 1.135em;
   }
 
@@ -117,11 +118,23 @@ body {
   .testimonials{
     grid-template-columns: repeat(4, 1fr);
     max-width: 90rem;
-    padding: 1.2em;
+    padding: 1em;
+  }
+
+  .card__description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .card__assessment {
+    font-size: .9rem;
+    line-height: 1.4;
   }
 
   .card:nth-of-type(1){
     grid-column: 1 / 3;
+    grid-row: 1;
   }
 
   .card:nth-of-type(4){
@@ -133,7 +146,6 @@ body {
     grid-column: 4;
     grid-row: 1 / 3;
   }
-
 
 }
 
