@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --clr-bg-blue: #1976d2;
+  --clr-bg-purple: #6f2dbd;
+  --clr-bg-black: #212529;
+
+  --clr-box-img: #8e8e8e;
+
+  --clr-bg-body: #f5f3f4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-bg-body);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.testimonials {
+  display: grid;
+  grid-gap: 1.2em;
+  grid-template-columns: 1fr;
+  max-width: min(90%);
+  margin: 6.25em auto;
+}
+
+.card {
+  background-color: #FFF;
+  border-radius: .625rem;
+  box-shadow: rgba(17,12,46,.1) 0 58px 100px 0;
+  padding: 1.8em;
+}
+
+.card__img {
+  border-radius: 50%;
+  border: 2.5px solid var(--clr-box-img);
+  height: 3.125rem;
+  margin-right: 1rem;
+  width: 3.125rem;
+}
+
+.card__header {
+  align-items: center;
+  display: flex;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.card__header h3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: .1rem;
+}
+
+.card__header p {
+  font-size: .925em;
+  font-weight: 300;
+  opacity: 50%;
+}
+
+.description {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.assessment {
+  font-size: 1em;
+  line-height: 1.4;
+  opacity: 70%;
+}
+
+.card--bg-blue,
+.card--bg-black,
+.card--bg-purple {
+  color: #FFF;
+}
+
+@media (min-width: 50em) {
+  .testimonials {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .assessment{
+    font-size: 1.135em;
+  }
+
+  .card:nth-of-type(1){
+    grid-column: 1 / 3;
+  }
+
+  .card:nth-of-type(4){
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+
+  .card:nth-of-type(5){
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 68.5em){
+  .testimonials{
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 90rem;
+    padding: 1.2em;
+  }
+
+  .card:nth-of-type(1){
+    grid-column: 1 / 3;
+  }
+
+  .card:nth-of-type(4){
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .card:nth-of-type(5){
+    grid-column: 4;
+    grid-row: 1 / 3;
+  }
+
+
+}
+
+.card--bg-blue {
+  background-color: var(--clr-bg-blue);
+}
+
+.card--bg-black {
+  background-color: var(--clr-bg-black);
+  grid-row: 3;
+}
+
+.card--bg-purple {
+  background-color: var(--clr-bg-purple);
+}
+
